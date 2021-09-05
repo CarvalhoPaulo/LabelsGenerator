@@ -1,0 +1,2 @@
+# LabelsGenerator
+Gerador de Etiquetas
