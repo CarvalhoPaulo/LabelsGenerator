@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="394.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.phtc.view.LabelsGeneratorScreenController">
+	<children>
+		<Button fx:id="button" layoutX="7.0" layoutY="350.0" mnemonicParsing="false" onAction="#onClick" prefHeight="36.0" prefWidth="276.0" text="Gerar Etiquetas" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtPageCount" layoutX="180.0" layoutY="221.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtFirstNumber" layoutX="180.0" layoutY="253.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtLabelCount" layoutX="180.0" layoutY="285.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtLastNumber" layoutX="180.0" layoutY="317.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<Label layoutX="7.0" layoutY="226.0" style="-fx-font-weight: 700;" text="Número de Paginas:" AnchorPane.leftAnchor="7.0" />
+		<Label layoutX="7.0" layoutY="258.0" style="-fx-font-weight: 700;" text="Primeiro Número:" AnchorPane.leftAnchor="7.0" />
+		<Label layoutX="7.0" layoutY="290.0" text="Quantidade de Etiquetas:" AnchorPane.leftAnchor="7.0" />
+		<Label layoutX="7.0" layoutY="322.0" text="Ultimo Número:" AnchorPane.leftAnchor="7.0" />
+		<Label layoutX="17.0" layoutY="14.0" prefHeight="45.0" prefWidth="267.0" style="-fx-font-weight: 700; -fx-font-size: 18px;" text="Gerador de Etiquetas de Codigo de Barras" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="7.0" layoutY="59.0" prefHeight="15.0" prefWidth="354.0" text="Informe os valores e clique em &quot;Gerar Etiquetas&quot;. " wrapText="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="59.0" />
+		<Label layoutX="7.0" layoutY="77.0" text="Os campos em negrito são obrigatórios." AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+		<Label layoutX="7.0" layoutY="94.0" prefHeight="16.0" prefWidth="354.0" text="Cada pagina possui ate 4 linhas com 4 colunas" wrapText="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+		<Label layoutX="7.0" layoutY="112.0" prefHeight="16.0" prefWidth="354.0" text="As etiquetas das linhas sao repetidas" wrapText="true" />
+		<Label layoutX="7.0" layoutY="131.0" prefHeight="45.0" prefWidth="354.0" text="A quantidade de linhas será baseada na quantidade de páginas, quantidade de etiquetas ou último número informado" wrapText="true" />
+		<Label layoutX="6.0" layoutY="178.0" prefHeight="36.0" prefWidth="354.0" text="Não será possivel informar ambas quantidade de etiquetas e último número." wrapText="true" />
+	</children>
+</AnchorPane>

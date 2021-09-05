@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 4.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="label-report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="738" leftMargin="53" rightMargin="51" topMargin="25" bottomMargin="19">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="number" class="java.lang.String">
+		<fieldDescription><![CDATA[number]]></fieldDescription>
+	</field>
+	<field name="barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[barcode]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="137" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="39" width="132" height="27"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="41" y="66" width="132" height="25">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false" rotation="None">
+					<jr:codeExpression><![CDATA[$F{barcode}]]></jr:codeExpression>
+					<jr:applicationIdentifierExpression><![CDATA["1352015"]]></jr:applicationIdentifierExpression>
+				</jr:barbecue>
+			</componentElement>
+			<componentElement>
+				<reportElement x="212" y="66" width="132" height="25"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false" rotation="None">
+					<jr:codeExpression><![CDATA[$F{barcode}]]></jr:codeExpression>
+					<jr:applicationIdentifierExpression><![CDATA["1352015"]]></jr:applicationIdentifierExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="212" y="39" width="132" height="27"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="385" y="66" width="132" height="25">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false" rotation="None">
+					<jr:codeExpression><![CDATA[$F{barcode}]]></jr:codeExpression>
+					<jr:applicationIdentifierExpression><![CDATA["1352015"]]></jr:applicationIdentifierExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="385" y="39" width="132" height="27"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="559" y="66" width="132" height="25"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false" rotation="None">
+					<jr:codeExpression><![CDATA[$F{barcode}]]></jr:codeExpression>
+					<jr:applicationIdentifierExpression><![CDATA["1352015"]]></jr:applicationIdentifierExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="559" y="39" width="132" height="27"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
