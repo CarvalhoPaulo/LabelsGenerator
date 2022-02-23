@@ -10,10 +10,10 @@
 <AnchorPane prefHeight="394.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.phtc.view.LabelsGeneratorScreenController">
 	<children>
 		<Button fx:id="button" layoutX="7.0" layoutY="350.0" mnemonicParsing="false" onAction="#onClick" prefHeight="36.0" prefWidth="276.0" text="Gerar Etiquetas" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
-		<TextField fx:id="txtPageCount" layoutX="180.0" layoutY="221.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
-		<TextField fx:id="txtFirstNumber" layoutX="180.0" layoutY="253.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
-		<TextField fx:id="txtLabelCount" layoutX="180.0" layoutY="285.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
-		<TextField fx:id="txtLastNumber" layoutX="180.0" layoutY="317.0" onKeyTyped="#onTxtTyped" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtPageCount" layoutX="180.0" layoutY="221.0" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtFirstNumber" layoutX="180.0" layoutY="253.0" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtLabelCount" layoutX="180.0" layoutY="285.0" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
+		<TextField fx:id="txtLastNumber" layoutX="180.0" layoutY="317.0" prefHeight="25.0" prefWidth="103.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="7.0" />
 		<Label layoutX="7.0" layoutY="226.0" style="-fx-font-weight: 700;" text="Número de Paginas:" AnchorPane.leftAnchor="7.0" />
 		<Label layoutX="7.0" layoutY="258.0" style="-fx-font-weight: 700;" text="Primeiro Número:" AnchorPane.leftAnchor="7.0" />
 		<Label layoutX="7.0" layoutY="290.0" text="Quantidade de Etiquetas:" AnchorPane.leftAnchor="7.0" />

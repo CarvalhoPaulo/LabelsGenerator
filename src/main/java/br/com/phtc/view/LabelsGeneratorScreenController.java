@@ -11,6 +11,7 @@ import br.com.phtc.module.LabelsGeneratorModule;
 import br.com.phtc.utils.FXAlertUtils;
 import br.com.phtc.utils.FXListenerUtils;
 import br.com.phtc.utils.FXTextFieldUtils;
+import javafx.beans.value.ChangeListener;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
@@ -41,6 +42,53 @@ public class LabelsGeneratorScreenController implements Initializable {
 	@FXML
 	private TextField txtLastNumber = new TextField();
 	
+	private ChangeListener<String> fistNumberChangeListener = (obj, oldVal, newVal) -> {
+		removeListeners();
+		try {
+			if (!txtFirstNumber.getText().isEmpty()
+					&& !txtLabelCount.getText().isEmpty()) {
+				calculateLastNumber();
+			}
+		} finally {
+			addListeners();
+		}
+	};
+	
+	private ChangeListener<String> labelCountChangeListener = (obj, oldVal, newVal) -> {
+		removeListeners();
+		try {
+			onLabelCountChange();
+			if (!txtFirstNumber.getText().isEmpty()
+					&& !txtLabelCount.getText().isEmpty()) {
+				calculateLastNumber();
+			}
+		} finally {
+			addListeners();
+		}
+	};
+	
+	private ChangeListener<String> pageCountChangeListener = (obj, oldVal, newVal) -> {
+		removeListeners();
+		try {
+			onPageCountChange();
+			if (!txtFirstNumber.getText().isEmpty()
+					&& !txtLabelCount.getText().isEmpty()) {
+				calculateLastNumber();
+			}
+		} finally {
+			addListeners();
+		}
+	};
+	
+	private ChangeListener<String> lastNumberChangeListener = (obj, oldVal, newVal) -> {
+		removeListeners();
+		try {
+			onLastNumberChange();
+		} finally {
+			addListeners();
+		}
+	};
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		FXListenerUtils.addOnlyNumber(txtPageCount);
@@ -52,6 +100,22 @@ public class LabelsGeneratorScreenController implements Initializable {
 		FXListenerUtils.addTextLimiter(txtLabelCount, 11);
 		FXListenerUtils.addTextLimiter(txtFirstNumber, 11);
 		FXListenerUtils.addTextLimiter(txtLastNumber, 11);
+		
+		addListeners();
+	}
+
+	private void addListeners() {
+		txtPageCount.textProperty().addListener(pageCountChangeListener);
+		txtLabelCount.textProperty().addListener(labelCountChangeListener);
+		txtFirstNumber.textProperty().addListener(fistNumberChangeListener);
+		txtLastNumber.textProperty().addListener(lastNumberChangeListener);
+	}
+	
+	private void removeListeners() {
+		txtPageCount.textProperty().removeListener(pageCountChangeListener);
+		txtLabelCount.textProperty().removeListener(labelCountChangeListener);
+		txtFirstNumber.textProperty().removeListener(fistNumberChangeListener);
+		txtLastNumber.textProperty().removeListener(lastNumberChangeListener);
 	}
 
 	@FXML
@@ -113,23 +177,8 @@ public class LabelsGeneratorScreenController implements Initializable {
 	}
 
 	@FXML
-	private void onTxtTyped(Event event) {
-		if (event.getTarget() == txtPageCount) {
-			onPageCountChange();
-		}
+	private void onTxtPressed(Event event) {
 
-		if (event.getTarget() == txtLabelCount) {
-			onLabelCountChange();
-		}
-
-		if (event.getTarget() != txtLastNumber && !txtFirstNumber.getText().isEmpty()
-				&& !txtLabelCount.getText().isEmpty()) {
-			calculateLastNumber();
-		}
-
-		if (event.getTarget() == txtLastNumber) {
-			onLastNumberChange();
-		}
 	}
 
 	private void calculateLastNumber() {
